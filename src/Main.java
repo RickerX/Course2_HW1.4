@@ -12,18 +12,18 @@ public class Main {
         System.out.println("=============================");
     }
     public static void main(String[] args) {
-        Car volvoBus = new Bus("", "", 0);
-        Car audiBus = new Bus("Ауди", "А2", 6);
-        Car bmwBus = new Bus("БМВ", "А3", 7);
-        Car mersedesBus = new Bus("Мерседес", "А4", 5);
-        Car volvo = new PassengerCars("Вольво", "S 90", 2.5);
-        Car audi = new PassengerCars("Ауди", "RS 6", 4.0);
-        Car bmw = new PassengerCars("БМВ", "M5 CS", 4.4);
-        Car mersedes = new PassengerCars("Мерседес", "С 63 AMG", 6.3);
-        Car volvoTruck = new Trucks("Вольво", "Б1", 10);
-        Car audiTruck = new Trucks("Ауди", "Б2", 12);
-        Car bmwTruck = new Trucks("БМВ", "Б3", 11);
-        Car mersedesTruck = new Trucks("Мерседес", "Б4", 15);
+        Bus volvoBus = new Bus("", "", 0);
+        Bus audiBus = new Bus("Ауди", "А2", 6);
+        Bus bmwBus = new Bus("БМВ", "А3", 7);
+        Bus mersedesBus = new Bus("Мерседес", "А4", 5);
+        PassengerCars volvo = new PassengerCars("Вольво", "S 90", 2.5);
+        PassengerCars audi = new PassengerCars("Ауди", "RS 6", 4.0);
+        PassengerCars bmw = new PassengerCars("БМВ", "M5 CS", 4.4);
+        PassengerCars mersedes = new PassengerCars("Мерседес", "С 63 AMG", 6.3);
+        Trucks volvoTruck = new Trucks("Вольво", "Б1", 10);
+        Trucks audiTruck = new Trucks("Ауди", "Б2", 12);
+        Trucks bmwTruck = new Trucks("БМВ", "Б3", 11);
+        Trucks mersedesTruck = new Trucks("Мерседес", "Б4", 15);
         separation();
         System.out.println(volvoBus);
         System.out.println(audiBus);
@@ -47,17 +47,14 @@ public class Main {
         System.out.println(mersedesTruck + " лучший круг: " + mersedesTruck.bestLapTime() +
                 " максимальная скорость: " + mersedesTruck.maxSpeed() + " " + mersedesTruck.pitStop());
         separation();
-        DriverC ivan = new DriverC("Иван", "10", "права категории С");
-        DriverB artem = new DriverB("Артем", "5", "права категории В");
-        DriverD oleg = new DriverD("Олег", "15", "права категории D");
-        ivan.driveCar();
-        System.out.println("Управляет автомобилем: " + volvoTruck + "И будет учавствовать в заезде.");
-        separation();
-        artem.driveCar();
-        System.out.println("Управляет автомобилем: " + volvo + "И будет учавствовать в заезде.");
-        separation();
-        oleg.driveCar();
-        System.out.println("Управляет автомобилем: " + volvoBus + "И будет учавствовать в заезде.");
-        separation();
+        Driver<PassengerCars> artem = new Driver<>("Артем", "5", "права категории В");
+        artem.driveCar(volvo);
+        Driver<Trucks> ivan = new Driver<>("Иван", "10", "права категории С");
+        ivan.driveCar(volvoTruck);
+        Driver<Bus> oleg = new Driver<>("Олег", "15", "права категории D");
+        oleg.driveCar(mersedesBus);
+
+
+
     }
 }

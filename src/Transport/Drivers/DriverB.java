@@ -2,13 +2,9 @@ package Transport.Drivers;
 
 import Transport.Autosport.PassengerCars;
 
-public class DriverB extends Driver {
-    public DriverB(String fio, String experience, String driversLicense) {
-        super(fio, experience, driversLicense);
+public class DriverB extends Driver<PassengerCars> {
+    public DriverB(String fullName, String license, String experience) {
+        super(fullName, license, experience);
     }
 
-    @Override
-    public void driveCar() {
-        System.out.println("Водитель: " + getFio() + " стаж: " + getExperience() +  " лет, наличие водительских прав: " + getDriversLicense());
-    }
 }

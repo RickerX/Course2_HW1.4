@@ -1,6 +1,8 @@
 package Transport.Drivers;
 
-public abstract class Driver {
+import Transport.Car;
+
+public class Driver < T extends Car > {
     private String fio;
     private String experience;
     private String driversLicense;
@@ -59,5 +61,8 @@ public abstract class Driver {
     public String toString() {
         return "Водитель: " + fio + " стаж: " + experience +  " лет, наличие водительских прав: " + driversLicense;
     }
-    public abstract void driveCar();
+    public void driveCar(T car) {
+        System.out.println("Водитель " + getFio() + " водит легковую машину " + car.getBrand() + " " + car.getModel() +
+                " и будет учавствовать в заезде");
+    }
 }
