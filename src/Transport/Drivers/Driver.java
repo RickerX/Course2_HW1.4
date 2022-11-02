@@ -65,4 +65,5 @@ public class Driver < T extends Car > {
         System.out.println("Водитель " + getFio() + " водит легковую машину " + car.getBrand() + " " + car.getModel() +
                 " и будет учавствовать в заезде");
     }
+
 }

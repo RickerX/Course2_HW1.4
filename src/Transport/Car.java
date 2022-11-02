@@ -53,4 +53,5 @@ public abstract class Car implements Competing{
     public String toString() {
         return "Бренд: " + getBrand() + '\'' + " модель: " + getModel() + '\'' + " объем двигателя: " +getEngineVolume() + " литра. " ;
     }
+
 }

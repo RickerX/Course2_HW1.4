@@ -48,11 +48,12 @@ public class Main {
                 " максимальная скорость: " + mersedesTruck.maxSpeed() + " " + mersedesTruck.pitStop());
         separation();
         Driver<PassengerCars> artem = new Driver<>("Артем", "5", "права категории В");
-        artem.driveCar(volvo);
+        artem.driveCar(mersedes);
         Driver<Trucks> ivan = new Driver<>("Иван", "10", "права категории С");
         ivan.driveCar(volvoTruck);
         Driver<Bus> oleg = new Driver<>("Олег", "15", "права категории D");
         oleg.driveCar(mersedesBus);
+
 
 
 

@@ -32,4 +32,5 @@ public class PassengerCars extends Car {
     public String maxSpeed() {
         return "160 км/ч";
     }
+
 }
