@@ -2,7 +2,7 @@ import Transport.Autosport.Bus;
 import Transport.Autosport.PassengerCars;
 import Transport.Autosport.Trucks;
 import Transport.Car;
-import Transport.Competing;
+import Transport.Drivers.Driver;
 import Transport.Drivers.DriverB;
 import Transport.Drivers.DriverC;
 import Transport.Drivers.DriverD;
@@ -50,10 +50,14 @@ public class Main {
         DriverC ivan = new DriverC("Иван", "10", "права категории С");
         DriverB artem = new DriverB("Артем", "5", "права категории В");
         DriverD oleg = new DriverD("Олег", "15", "права категории D");
-        System.out.println(ivan + " управляет автомобилем: " + volvoTruck + "И будет учавствовать в заезде.");
-        System.out.println(artem + " управляет автомобилем: " + volvo + "И будет учавствовать в заезде.");
-        System.out.println(oleg + " управляет автомобилем: " + volvoBus + "И будет учавствовать в заезде.");
-
-
+        ivan.driveCar();
+        System.out.println("Управляет автомобилем: " + volvoTruck + "И будет учавствовать в заезде.");
+        separation();
+        artem.driveCar();
+        System.out.println("Управляет автомобилем: " + volvo + "И будет учавствовать в заезде.");
+        separation();
+        oleg.driveCar();
+        System.out.println("Управляет автомобилем: " + volvoBus + "И будет учавствовать в заезде.");
+        separation();
     }
 }
